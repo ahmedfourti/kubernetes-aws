@@ -116,16 +116,33 @@ nodes                   Node    t2.micro        3       3       eu-west-1a,eu-we
 
 NODE STATUS
 NAME                                            ROLE    READY
-ip-172-20-127-216.eu-west-1.compute.internal    node    True
-ip-172-20-44-86.eu-west-1.compute.internal      node    True
-ip-172-20-59-134.eu-west-1.compute.internal     master  True
-ip-172-20-87-40.eu-west-1.compute.internal      master  True
-ip-172-20-94-239.eu-west-1.compute.internal     node    True
-ip-172-20-97-24.eu-west-1.compute.internal      master  True
+ip-172-20-108-28.eu-west-1.compute.internal     node    True
+ip-172-20-127-49.eu-west-1.compute.internal     master  True
+ip-172-20-40-178.eu-west-1.compute.internal     node    True
+ip-172-20-56-65.eu-west-1.compute.internal      master  True
+ip-172-20-69-224.eu-west-1.compute.internal     node    True
+ip-172-20-76-177.eu-west-1.compute.internal     master  True
 
 Your cluster home-cluster.k8s.local.aws is ready
 ```
 
+Our infrastructure is now ready.  
+We can start working on it using ```kubectl``` to deploy our apps.  
+Make sure that the following command is listing your cluster nodes.
+
+```
+kubetclt get node  
 
 
+NAME                                          STATUS    ROLES     AGE       VERSION
+ip-172-20-108-28.eu-west-1.compute.internal   Ready     node      2m        v1.8.4
+ip-172-20-127-49.eu-west-1.compute.internal   Ready     master    3m        v1.8.4
+ip-172-20-40-178.eu-west-1.compute.internal   Ready     node      1m        v1.8.4
+ip-172-20-56-65.eu-west-1.compute.internal    Ready     master    3m        v1.8.4
+ip-172-20-69-224.eu-west-1.compute.internal   Ready     node      2m        v1.8.4
+ip-172-20-76-177.eu-west-1.compute.internal   Ready     master    3m        v1.8.4
+```
+
+Here we go, our Kubernetes Cluster is ready for use.  
+In other repositories, I'll show you how we can create some microservices running on the Kubernetes Cluster.  
   
